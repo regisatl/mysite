@@ -12,69 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
     <title>Questions</title>
-    <style>
-      body {
-        font-family:Poppins;
-        margin: 0 auto;
-        padding: 4;
-        max-width:800px;
-        color: #1e293b:
-        background-color: #f8f9fa;
-      }
-      .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius:1rem;
-            margin-top: 50px;
-      }
-      h1 {
-            text-align: center;
-            color: #343a40;
-      }
-      .card {
-            padding: 20px;
-            margin-top: 20px;
-            border: 1px solid #dee2e6;
-            border-radius: 0.5rem;
-            background-color: #f8f9fa;
-      }
 
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      li {
-        margin-bottom: 2;
-      }
-
-      a {
-        text-decoration: none;
-        color: #3490dc;
-      }
-
-      a:hover {
-        color: #2779bd;
-        text-decoration: underline;
-      }
-
-      p {
-        color: #4a5568;
-      }
-
-      @media (max-width: 600px) {
-        body {
-            max-width: 400px;
-            margin: 0 auto;
-            font-size: 1rem;
-        }
-      }
-    </style>
   </head>
 
   <body>
