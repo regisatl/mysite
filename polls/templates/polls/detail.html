@@ -32,6 +32,47 @@
             border-radius:1rem;
             margin-top: 50px;
       }
+      h1 {
+            color: #343a40;
+      }
+      .card {
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            background-color: #f8f9fa;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 2;
+      }
+
+      a {
+        text-decoration: none;
+        color: #3490dc;
+      }
+
+      a:hover {
+        color: #2779bd;
+        text-decoration: underline;
+      }
+
+      p {
+        color: #4a5568;
+      }
+
+      @media (max-width: 600px) {
+        body {
+            max-width: 400px;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+      }
     </style>
   </head>
 
@@ -39,9 +80,12 @@
     <div class="container">
       <h1>Listes des détails des questions</h1>
       <div class="card">
-        <ul>
-          <li>{{question}}</li>
-        </ul>
+            <h2>{{ question.question_text }}</h2>
+            <ul>
+            {% for choice in question.choice_set.all %}
+                <li>{{ choice.choice_text }}</li>
+            {% endfor %}
+            </ul>
       </div>
     </div>
   </body>
