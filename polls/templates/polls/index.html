@@ -21,6 +21,26 @@
         padding: 4;
         max-width:800px;
         color: #1e293b:
+        background-color: #f8f9fa;
+      }
+      .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius:1rem;
+            margin-top: 50px;
+      }
+      h1 {
+            color: #343a40;
+      }
+      .card {
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            background-color: #f8f9fa;
       }
 
       ul {
@@ -39,6 +59,7 @@
 
       a:hover {
         color: #2779bd;
+        text-decoration: underline;
       }
 
       p {
@@ -47,23 +68,30 @@
 
       @media (max-width: 600px) {
         body {
-          font-size: 14px;
+            max-width: 400px;
+            margin: 0 auto;
+            font-size: 1rem;
         }
       }
     </style>
   </head>
 
   <body>
-    {% if latest_question_list %}
-    <ul>
-      {% for question in latest_question_list %}
-      <li>
-        <a href="/polls/{{ question.id }}/">{{ question.question_text }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-    {% else %}
-    <p>No polls are available.</p>
-    {% endif %}
+    <div class="container">
+      <h1>Listes des questions</h1>
+      <div class="card">
+        {% if latest_question_list %}
+        <ul>
+          {% for question in latest_question_list %}
+          <li>
+            <a href="/polls/{{ question.id }}/">{{ question.question_text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>No polls are available.</p>
+        {% endif %}
+      </div>
+    </div>
   </body>
 </html>
