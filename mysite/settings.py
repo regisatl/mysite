@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mysite',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',   # Ou l'adresse IP de votre serveur de base de données
+        'PORT': '3306',        # Le port par défaut de MySQL est 3306
     }
 }
 
